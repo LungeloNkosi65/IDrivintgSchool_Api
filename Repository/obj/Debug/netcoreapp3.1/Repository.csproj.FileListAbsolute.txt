@@ -1,0 +1,11 @@
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.json
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Repository.runtimeconfig.dev.json
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache

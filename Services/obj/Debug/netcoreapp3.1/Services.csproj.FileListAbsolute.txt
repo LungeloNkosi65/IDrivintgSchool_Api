@@ -1,0 +1,5 @@
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\bin\Debug\netcoreapp3.1\Services.deps.json
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.csprojAssemblyReference.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfoInputs.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.AssemblyInfo.cs
