@@ -13,9 +13,9 @@ namespace DrivingSchool_Api.Controllers
     public class BookingPackagesController : ControllerBase
     {
         private readonly IBookingPackageService _bookingPackageService;
-        private readonly IErrorMessageService _errorMessageService;
+        private readonly IErrorMessageService<BookingPackagesController> _errorMessageService;
 
-        public BookingPackagesController(IBookingPackageService bookingPackageService,IErrorMessageService errorMessageService)
+        public BookingPackagesController(IBookingPackageService bookingPackageService,IErrorMessageService<BookingPackagesController> errorMessageService)
         {
             _bookingPackageService = bookingPackageService;
             _errorMessageService = errorMessageService;
@@ -34,6 +34,35 @@ namespace DrivingSchool_Api.Controllers
                 else
                 {
                     return NotFound(_errorMessageService.NotFound());
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(_errorMessageService.BadRequest(ex));
+            }
+        }
+
+        [HttpGet]
+        [Route("GetVm")]
+        public IActionResult GetVmDetails(int? bookiTypeId)
+        {
+            try
+            {
+                if (bookiTypeId.HasValue)
+                {
+                    var results = _bookingPackageService.GetVmDetails(bookiTypeId).ToList();
+                    if (results.Any())
+                    {
+                        return Ok(results);
+                    }
+                    else
+                    {
+                        return NotFound(_errorMessageService.NotFound());
+                    }
+                }
+                else
+                {
+                    return BadRequest(_errorMessageService.NullParameter());
                 }
             }
             catch (Exception ex)

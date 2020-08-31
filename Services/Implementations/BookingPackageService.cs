@@ -1,4 +1,5 @@
 ﻿using DrivingSchool_Api;
+using Models.ViewModels;
 using Repository.Interfaces;
 using Services.Interfaces;
 using System;
@@ -35,6 +36,11 @@ namespace Services.Implementations
         public IQueryable<BookingPackage> GetSingle(int? bkpId)
         {
             return _bookingPackageRepository.GetSingleRecord(bkpId);
+        }
+
+        public IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId)
+        {
+            return _bookingPackageRepository.GetVmDetails(bookingTypeId);
         }
 
         public void Update(BookingPackage bookingPackage)

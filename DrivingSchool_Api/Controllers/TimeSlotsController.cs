@@ -14,9 +14,9 @@ namespace DrivingSchool_Api.Controllers
     public class TimeSlotsController : ControllerBase
     {
         private readonly ITimeSlotService _timeSlotService;
-        private readonly IErrorMessageService _errorMessageService;
+        private readonly IErrorMessageService<TimeSlotsController> _errorMessageService;
 
-        public TimeSlotsController(ITimeSlotService timeSlotService,IErrorMessageService errorMessageService)
+        public TimeSlotsController(ITimeSlotService timeSlotService,IErrorMessageService<TimeSlotsController> errorMessageService)
         {
             _timeSlotService = timeSlotService;
             _errorMessageService = errorMessageService;

@@ -1,4 +1,5 @@
 ﻿using DrivingSchool_Api;
+using Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,6 @@ namespace Services.Interfaces
         void Delete(int? bkpId);
         IQueryable<BookingPackage> GatAll();
         IQueryable<BookingPackage> GetSingle(int? bkpId);
+        IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId);
     }
 }

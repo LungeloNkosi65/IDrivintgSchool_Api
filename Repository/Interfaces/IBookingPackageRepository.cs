@@ -1,4 +1,5 @@
 ﻿using DrivingSchool_Api;
+using Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace Repository.Interfaces
         IQueryable<BookingPackage> GetAll();
         IQueryable<BookingPackage> GetSingleRecord(int? bkPId);
         BookingPackage Find(int? bookingPackageId);
+
+        IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId);
     }
 }

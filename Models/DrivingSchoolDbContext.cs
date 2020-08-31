@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Models.ViewModels;
 
 namespace DrivingSchool_Api
 {
@@ -20,15 +21,17 @@ namespace DrivingSchool_Api
         public virtual DbSet<BookingType> BookingType { get; set; }
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<TimeSlot> TimeSlot { get; set; }
+        public virtual DbSet<BookingPackageVm> BookingPackageVm { get; set; }
 
-//        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//        {
-//            if (!optionsBuilder.IsConfigured)
-//            {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                optionsBuilder.UseSqlServer("Server=(LocalDb)\\LocalDb.;Database=DrivingSchoolDb;Trusted_Connection=True;");
-//            }
-//        }
+
+        //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //        {
+        //            if (!optionsBuilder.IsConfigured)
+        //            {
+        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+        //                optionsBuilder.UseSqlServer("Server=(LocalDb)\\LocalDb.;Database=DrivingSchoolDb;Trusted_Connection=True;");
+        //            }
+        //        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

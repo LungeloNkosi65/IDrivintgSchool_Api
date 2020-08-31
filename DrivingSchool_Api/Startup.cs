@@ -29,18 +29,18 @@ namespace DrivingSchool_Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+            services.AddControllers();
             services.AddDbContext<DrivingSchoolDbContext>(options =>
                                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<ITimeSlotRepository, TimeSlotRepository>();
             services.AddScoped<ITimeSlotService, TimeSlotService>();
-            services.AddScoped<IErrorMessageService, ErrorMessageService>();
+            services.AddScoped(typeof(IErrorMessageService<>), typeof(ErrorMessageService <>));
             services.AddScoped<IDapperBaseRepository, DapperBaseRepository>();
             services.AddScoped<IBookingPackageRepository, BookingPackageRepository>();
             services.AddScoped<IBookingPackageService, BookingPackageService>();
@@ -59,6 +59,7 @@ namespace DrivingSchool_Api
             }
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 

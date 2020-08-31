@@ -13,9 +13,9 @@ namespace DrivingSchool_Api.Controllers
     public class BookingTypesController : ControllerBase
     {
         private readonly IBookingTypeService _bookingTypeService;
-        private readonly IErrorMessageService _errorMessageService;
+        private readonly IErrorMessageService<BookingTypesController> _errorMessageService;
 
-        public BookingTypesController(IBookingTypeService bookingTypeService,IErrorMessageService errorMessageService)
+        public BookingTypesController(IBookingTypeService bookingTypeService,IErrorMessageService<BookingTypesController> errorMessageService)
         {
             _bookingTypeService = bookingTypeService;
             _errorMessageService = errorMessageService;

@@ -1,5 +1,6 @@
 ﻿using DrivingSchool_Api;
 using Microsoft.EntityFrameworkCore;
+using Models.ViewModels;
 using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,13 @@ namespace Repository.Implementations
             var parameter = new { bkPId };
             string qeury = "GetSinglePackage";
             return _dapperBaseRepository.QuerySingl<BookingPackage>(qeury, parameter);
+        }
+
+        public IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId)
+        {
+            var parameter = new { bookingTypeId };
+             string command = "PackagesView";
+            return _dapperBaseRepository.QueryWithParameter<BookingPackageVm>(command, parameter);
         }
 
         public void Update(BookingPackage bookingPackage)

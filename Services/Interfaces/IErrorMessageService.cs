@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Services.Interfaces
 {
-    public interface IErrorMessageService
+    public interface IErrorMessageService<T>
     {
         string AddSuccessMessage();
         string UpdateSuccess();
