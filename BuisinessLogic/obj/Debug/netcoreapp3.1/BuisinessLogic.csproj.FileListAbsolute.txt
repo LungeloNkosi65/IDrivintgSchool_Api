@@ -1,0 +1,16 @@
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\BuisinessLogic.deps.json
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\BuisinessLogic.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\BuisinessLogic.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.csprojAssemblyReference.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.AssemblyInfoInputs.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.AssemblyInfo.cs
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.csproj.CopyComplete
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\BuisinessLogic\obj\Debug\netcoreapp3.1\BuisinessLogic.pdb

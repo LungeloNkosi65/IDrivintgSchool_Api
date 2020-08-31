@@ -11,7 +11,7 @@ namespace DrivingSchool_Api
         }
 
         public int TimeId { get; set; }
-        public TimeSpan TimeSlot1 { get; set; }
+        public DateTime TimeSlot1 { get; set; }
 
         public virtual ICollection<Booking> Booking { get; set; }
     }

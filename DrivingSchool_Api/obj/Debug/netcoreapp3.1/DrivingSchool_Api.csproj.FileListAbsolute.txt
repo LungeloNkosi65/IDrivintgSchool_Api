@@ -59,3 +59,10 @@ C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netc
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.dll
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.pdb
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.genruntimeconfig.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Services.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Services.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\Repository.pdb

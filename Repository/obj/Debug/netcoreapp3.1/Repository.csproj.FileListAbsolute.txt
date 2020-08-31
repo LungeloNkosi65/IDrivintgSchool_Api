@@ -9,3 +9,7 @@ C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Models.pdb
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Repository\obj\Debug\netcoreapp3.1\Repository.pdb

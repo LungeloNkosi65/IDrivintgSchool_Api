@@ -5,10 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Repository.Implementations;
+using Repository.Interfaces;
+using Services.Implementations;
+using Services.Interfaces;
 
 namespace DrivingSchool_Api
 {
@@ -25,6 +30,24 @@ namespace DrivingSchool_Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+            services.AddDbContext<DrivingSchoolDbContext>(options =>
+                                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<ITimeSlotRepository, TimeSlotRepository>();
+            services.AddScoped<ITimeSlotService, TimeSlotService>();
+            services.AddScoped<IErrorMessageService, ErrorMessageService>();
+            services.AddScoped<IDapperBaseRepository, DapperBaseRepository>();
+            services.AddScoped<IBookingPackageRepository, BookingPackageRepository>();
+            services.AddScoped<IBookingPackageService, BookingPackageService>();
+            services.AddScoped<IBookingTypeRepository, BookingTypeRepository>();
+            services.AddScoped<IBookingTypeService, BookingTypeService>();
+            services.AddScoped<IBookingRepository, BookingRepository>();
+            services.AddScoped<IBookingService, BookingService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
