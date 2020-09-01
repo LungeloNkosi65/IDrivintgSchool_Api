@@ -27,13 +27,174 @@ namespace Services.Implementations
 
         public string BadRequest(Exception ex)
         {
-            _logger.LogError("An error occured while processing your request", ex);
+            //_logger.LogError("An error occured while processing your request", ex);
             return $"An error occured while processing your request {ex}";
         }
 
         public string DeleteSuccess(object id)
         {
-            return $"Record with Id : {id} successfully deleted";
+            return $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"" +
+                $"Record with Id : {id} successfully deleted";
         }
 
         public string NotFound()
@@ -43,7 +204,7 @@ namespace Services.Implementations
 
         public string NullParameter()
         {
-            _logger.LogError("An error occured while processing request : Null parameter submited");
+            //_logger.LogError("An error occured while processing request : Null parameter submited");
             return ("There was an error while proccessing your request : Null parameter submited");
         }
 

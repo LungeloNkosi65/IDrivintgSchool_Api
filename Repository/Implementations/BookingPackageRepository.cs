@@ -36,7 +36,7 @@ namespace Repository.Implementations
         public BookingPackage Find(int? bookingPackageId)
         {
             return _db.BookingPackage.Find(bookingPackageId);
-
+            ///
         }
 
         public IQueryable<BookingPackage> GetAll()

@@ -40,7 +40,9 @@ namespace DrivingSchool_Api
                                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<ITimeSlotRepository, TimeSlotRepository>();
             services.AddScoped<ITimeSlotService, TimeSlotService>();
+
             services.AddScoped(typeof(IErrorMessageService<>), typeof(ErrorMessageService <>));
+
             services.AddScoped<IDapperBaseRepository, DapperBaseRepository>();
             services.AddScoped<IBookingPackageRepository, BookingPackageRepository>();
             services.AddScoped<IBookingPackageService, BookingPackageService>();
