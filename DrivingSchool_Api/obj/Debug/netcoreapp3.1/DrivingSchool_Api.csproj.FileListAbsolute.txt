@@ -54,8 +54,6 @@ C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netc
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.csproj.CoreCompileInputs.cache
-C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.dll
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.pdb
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\DrivingSchool_Api\obj\Debug\netcoreapp3.1\DrivingSchool_Api.genruntimeconfig.cache

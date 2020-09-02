@@ -47,6 +47,8 @@ namespace Repository.Implementations
         public IQueryable<BookingPackage> GetSingleRecord(int? bkPId)
         {
             var parameter = new { bkPId };
+            //object[] array = null;
+            //var parame = new { array };
             string qeury = "GetSinglePackage";
             return _dapperBaseRepository.QuerySingl<BookingPackage>(qeury, parameter);
         }
