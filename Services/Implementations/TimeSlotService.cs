@@ -10,9 +10,9 @@ namespace Services.Implementations
 {
     public class TimeSlotService : ITimeSlotService
     {
-        private readonly ITimeSlotRepository _timeSlotRepository;
+        private readonly IGenericRepository<TimeSlot> _timeSlotRepository;
 
-        public TimeSlotService(ITimeSlotRepository timeSlotRepository)
+        public TimeSlotService(IGenericRepository<TimeSlot> timeSlotRepository)
         {
             _timeSlotRepository = timeSlotRepository;
         }

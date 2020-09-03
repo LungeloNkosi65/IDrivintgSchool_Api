@@ -39,7 +39,8 @@ namespace DrivingSchool_Api
             services.AddControllers();
             services.AddDbContext<DrivingSchoolDbContext>(options =>
                                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<ITimeSlotRepository, TimeSlotRepository>();
+            services.AddScoped<IGenericRepository<TimeSlot>, TimeSlotRepository>();
+
             services.AddScoped<ITimeSlotService, TimeSlotService>();
 
             services.AddScoped(typeof(IErrorMessageService<>), typeof(ErrorMessageService <>));
