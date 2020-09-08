@@ -12,10 +12,10 @@ namespace DrivingSchool_Api.Controllers
     [ApiController]
     public class BookingPackagesController : ControllerBase
     {
-        private readonly IBookingPackageService _bookingPackageService;
+        private readonly IServicesUnitOfWork _bookingPackageService;
         private readonly IErrorMessageService<BookingPackagesController> _errorMessageService;
 
-        public BookingPackagesController(IBookingPackageService bookingPackageService,IErrorMessageService<BookingPackagesController> errorMessageService)
+        public BookingPackagesController(IServicesUnitOfWork bookingPackageService,IErrorMessageService<BookingPackagesController> errorMessageService)
         {
             _bookingPackageService = bookingPackageService;
             _errorMessageService = errorMessageService;
@@ -26,14 +26,14 @@ namespace DrivingSchool_Api.Controllers
         {
             try
             {
-                var results = _bookingPackageService.GatAll().ToList();
+                var results = _bookingPackageService.BookingPackageService.GatAll().ToList();
                 if (results.Any())
                 {
                     return Ok(results);
                 }
                 else
                 {
-                    return NotFound(_errorMessageService.NotFound());
+                    return Ok(_errorMessageService.NotFound());
                 }
             }
             catch (Exception ex)
@@ -44,20 +44,20 @@ namespace DrivingSchool_Api.Controllers
 
         [HttpGet]
         [Route("GetVm")]
-        public IActionResult GetVmDetails(int? bookiTypeId)
+        public IActionResult GetVmDetails(int? bookingTypeId)
         {
             try
             {
-                if (bookiTypeId.HasValue)
+                if (bookingTypeId.HasValue)
                 {
-                    var results = _bookingPackageService.GetVmDetails(bookiTypeId).ToList();
+                    var results = _bookingPackageService.BookingPackageService.GetVmDetails(bookingTypeId).ToList();
                     if (results.Any())
                     {
                         return Ok(results);
                     }
                     else
                     {
-                        return NotFound(_errorMessageService.NotFound());
+                        return Ok(_errorMessageService.NotFound());
                     }
                 }
                 else
@@ -79,7 +79,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkpId.HasValue)
                 {
-                    var results = _bookingPackageService.GetSingle(bkpId).ToList();
+                    var results = _bookingPackageService.BookingPackageService.GetSingle(bkpId).ToList();
                     if (results.Any())
                     {
                         return Ok(results);
@@ -107,7 +107,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bookingPackage != null)
                 {
-                    _bookingPackageService.Add(bookingPackage);
+                    _bookingPackageService.BookingPackageService.Add(bookingPackage);
                     return Ok(_errorMessageService.AddSuccessMessage());
                 }
                 else
@@ -129,10 +129,10 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkpId.HasValue)
                 {
-                    var dbRecord = _bookingPackageService.GetSingle(bkpId);
+                    var dbRecord = _bookingPackageService.BookingPackageService.GetSingle(bkpId);
                     if (dbRecord.Any())
                     {
-                        _bookingPackageService.Delete(bkpId);
+                        _bookingPackageService.BookingPackageService.Delete(bkpId);
                         return Ok(_errorMessageService.DeleteSuccess(bkpId));
                     }
                     else
@@ -158,7 +158,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkpId.HasValue && bookingPackage != null && bkpId == bookingPackage.BookingTypeId)
                 {
-                    _bookingPackageService.Update(bookingPackage);
+                    _bookingPackageService.BookingPackageService.Update(bookingPackage);
                     return Ok(_errorMessageService.UpdateSuccess());
                 }
                 else

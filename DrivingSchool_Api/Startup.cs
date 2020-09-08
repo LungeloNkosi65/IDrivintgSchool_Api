@@ -52,6 +52,7 @@ namespace DrivingSchool_Api
             services.AddScoped<IBookingTypeService, BookingTypeService>();
             services.AddScoped<IBookingRepository, BookingRepository>();
             services.AddScoped<IBookingService, BookingService>();
+            services.AddScoped<IServicesUnitOfWork, ServicesUnitOfWork>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

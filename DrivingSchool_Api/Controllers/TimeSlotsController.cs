@@ -13,12 +13,12 @@ namespace DrivingSchool_Api.Controllers
     [ApiController]
     public class TimeSlotsController : ControllerBase
     {
-        private readonly ITimeSlotService _timeSlotService;
+        private readonly IServicesUnitOfWork _servicesUnitOfWork;
         private readonly IErrorMessageService<TimeSlotsController> _errorMessageService;
 
-        public TimeSlotsController(ITimeSlotService timeSlotService,IErrorMessageService<TimeSlotsController> errorMessageService)
+        public TimeSlotsController(IServicesUnitOfWork servicesUnitOfWork,IErrorMessageService<TimeSlotsController> errorMessageService)
         {
-            _timeSlotService = timeSlotService;
+            _servicesUnitOfWork = servicesUnitOfWork;
             _errorMessageService = errorMessageService;
         }
 
@@ -27,7 +27,7 @@ namespace DrivingSchool_Api.Controllers
         {
             try
             {
-                var results = _timeSlotService.GetAll().ToList();
+                var results = _servicesUnitOfWork.TimeSlotService.GetAll().ToList();
                 if (results.Any())
                 {
                     return Ok(results);
@@ -51,7 +51,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (timeId.HasValue)
                 {
-                    var result = _timeSlotService.GetSingleRecord(timeId).ToList();
+                    var result = _servicesUnitOfWork.TimeSlotService.GetSingleRecord(timeId).ToList();
                     if (result.Any())
                     {
                         return Ok(result);
@@ -78,7 +78,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (timeSlot != null)
                 {
-                    _timeSlotService.Add(timeSlot);
+                    _servicesUnitOfWork.TimeSlotService.Add(timeSlot);
                     return Ok(_errorMessageService.AddSuccessMessage());
                 }
                 else
@@ -101,10 +101,10 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (timeId.HasValue)
                 {
-                    var dbRecord = _timeSlotService.GetSingleRecord(timeId);
+                    var dbRecord = _servicesUnitOfWork.TimeSlotService.GetSingleRecord(timeId);
                     if (dbRecord.Any())
                     {
-                        _timeSlotService.Delete(timeId);
+                        _servicesUnitOfWork.TimeSlotService.Delete(timeId);
                         // Test if passing an id of int or what ever data type would work when the interface expects an object type
                         return Ok(_errorMessageService.DeleteSuccess(timeId));
                     }
@@ -132,7 +132,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if(timeId.HasValue && timeId!=null && timeId == timeSlot.TimeId)
                 {
-                    _timeSlotService.Update(timeSlot);
+                    _servicesUnitOfWork.TimeSlotService.Update(timeSlot);
                     return Ok(_errorMessageService.UpdateSuccess());
                 }
                 else

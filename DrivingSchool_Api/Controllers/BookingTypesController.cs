@@ -12,12 +12,12 @@ namespace DrivingSchool_Api.Controllers
     [ApiController]
     public class BookingTypesController : ControllerBase
     {
-        private readonly IBookingTypeService _bookingTypeService;
+        private readonly IServicesUnitOfWork _servicesUnitOfWork;
         private readonly IErrorMessageService<BookingTypesController> _errorMessageService;
 
-        public BookingTypesController(IBookingTypeService bookingTypeService,IErrorMessageService<BookingTypesController> errorMessageService)
+        public BookingTypesController(IServicesUnitOfWork  servicesUnitOfWork,IErrorMessageService<BookingTypesController> errorMessageService)
         {
-            _bookingTypeService = bookingTypeService;
+            _servicesUnitOfWork = servicesUnitOfWork;
             _errorMessageService = errorMessageService;
         }
 
@@ -26,7 +26,7 @@ namespace DrivingSchool_Api.Controllers
         {
             try
             {
-                var results = _bookingTypeService.GatAll().ToList();
+                var results = _servicesUnitOfWork.BookingTypeService.GatAll().ToList();
                 if (results.Any())
                 {
                     return Ok(results);
@@ -50,7 +50,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkTId.HasValue)
                 {
-                    var results = _bookingTypeService.GetSingle(bkTId).ToList();
+                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bkTId).ToList();
                     if (results.Any())
                     {
                         return Ok(results);
@@ -78,7 +78,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bookingType !=null)
                 {
-                    _bookingTypeService.Add(bookingType);
+                    _servicesUnitOfWork.BookingTypeService.Add(bookingType);
                     return Ok(_errorMessageService.AddSuccessMessage());
                 }
                 else
@@ -99,10 +99,10 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkTId.HasValue)
                 {
-                    var dbRecord = _bookingTypeService.GetSingle(bkTId);
+                    var dbRecord = _servicesUnitOfWork.BookingTypeService.GetSingle(bkTId);
                     if (dbRecord.Any())
                     {
-                        _bookingTypeService.Delete(bkTId);
+                        _servicesUnitOfWork.BookingTypeService.Delete(bkTId);
                         return Ok(_errorMessageService.DeleteSuccess(bkTId));
                     }
                     else
@@ -128,7 +128,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if(bkTId.HasValue && bookingType!=null && bkTId == bookingType.BookingTypeId)
                 {
-                    _bookingTypeService.Update(bookingType);
+                    _servicesUnitOfWork.BookingTypeService.Update(bookingType);
                     return Ok(_errorMessageService.UpdateSuccess());
                 }
                 else
