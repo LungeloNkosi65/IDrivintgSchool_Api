@@ -7,13 +7,10 @@ namespace Repository.Interfaces
 {
     public interface IGenericRepository<T>
     {
-        void Add(T entity);
-        void Delete(object id);
-        void Update(T entity);
+        bool Add(T entity);
+        bool Delete(object id);
+        bool Update(T entity);
         IQueryable<T> GetAll();
         IQueryable<T> GetSingleRecord(object id);
-        T Find(object id);
-
-        IQueryable<T> BookingDetails(object id);
     }
 }

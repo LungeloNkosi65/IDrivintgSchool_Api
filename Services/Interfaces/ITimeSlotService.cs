@@ -8,11 +8,11 @@ namespace Services.Interfaces
 {
    public interface ITimeSlotService
     {
-        void Add(TimeSlot timeSlot);
-        void Delete(int? timeId);
-        void Update(TimeSlot timeSlot);
+        bool Add(TimeSlot timeSlot);
+        bool Delete(int? timeId);
+        bool Update(TimeSlot timeSlot);
         IQueryable<TimeSlot> GetAll();
         IQueryable<TimeSlot> GetSingleRecord(int? timeId);
-        TimeSlot Find(int? timeId);
+    
     }
 }

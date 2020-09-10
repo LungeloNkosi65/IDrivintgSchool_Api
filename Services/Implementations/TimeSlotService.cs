@@ -16,19 +16,15 @@ namespace Services.Implementations
         {
             _timeSlotRepository = timeSlotRepository;
         }
-        public void Add(TimeSlot timeSlot)
+
+        public bool Add(TimeSlot timeSlot)
         {
-            _timeSlotRepository.Add(timeSlot);
+            return _timeSlotRepository.Add(timeSlot);
         }
 
-        public void Delete(int? timeId)
+        public bool Delete(int? timeId)
         {
-            _timeSlotRepository.Delete(timeId);
-        }
-
-        public TimeSlot Find(int? timeId)
-        {
-           return _timeSlotRepository.Find(timeId);
+            return _timeSlotRepository.Delete(timeId);
         }
 
         public IQueryable<TimeSlot> GetAll()
@@ -41,9 +37,9 @@ namespace Services.Implementations
             return _timeSlotRepository.GetSingleRecord(timeId);
         }
 
-        public void Update(TimeSlot timeSlot)
+        public bool Update(TimeSlot timeSlot)
         {
-            _timeSlotRepository.Update(timeSlot);
+            return _timeSlotRepository.Update(timeSlot);
         }
     }
 }

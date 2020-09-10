@@ -22,6 +22,9 @@ namespace DrivingSchool_Api
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<TimeSlot> TimeSlot { get; set; }
         public virtual DbSet<BookingPackageVm> BookingPackageVm { get; set; }
+        public virtual DbSet<PackageInclusions> PackageInclusions { get; set; }
+        public virtual DbSet<PackageInclusionsAssc> PackageInclusionsAssc { get; set; }
+        public virtual DbSet<PackageInclusionVm> PackageInclusionVms { get; set;}
 
 
         //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -30,9 +30,25 @@ namespace DrivingSchoolBackOffice.Controllers
 
         // GET api/<BookingTypesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult GetAll(int? bookingTypeId)
         {
-            return "value";
+            try
+            {
+                if (bookingTypeId.HasValue)
+                {
+                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bookingTypeId).ToList();
+                    return Ok(results);
+                }
+                else
+                {
+                    return BadRequest("Fuck");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         // POST api/<BookingTypesController>

@@ -118,6 +118,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
             "knockoutjs": {
               "target": "Package",
               "version": "[3.5.1, )"

@@ -10,6 +10,14 @@ namespace Repository.Implementations
 {
     public class DapperBaseRepository : IDapperBaseRepository
     {
+        public int Execute(string query,object parameters)
+        {
+            using (var connection = DbRepository.SqlConnection())
+            {
+                return connection.Execute(query,parameters, commandType: CommandType.StoredProcedure);
+            }
+        }
+
         public IQueryable<T> Query<T>(string query)
         {
             using (var connection = DbRepository.SqlConnection())
@@ -22,7 +30,7 @@ namespace Repository.Implementations
         {
             using(var connection = DbRepository.SqlConnection())
             {
-                return connection.Query<T>(query, parameters, commandType: CommandType.StoredProcedure).AsQueryable();
+                return (IQueryable<T>)connection.QueryFirstOrDefault<T>(query, parameters,commandType:CommandType.StoredProcedure);
             }
         }
 

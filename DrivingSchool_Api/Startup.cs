@@ -52,6 +52,8 @@ namespace DrivingSchool_Api
             services.AddScoped<IBookingTypeService, BookingTypeService>();
             services.AddScoped<IBookingRepository, BookingRepository>();
             services.AddScoped<IBookingService, BookingService>();
+            services.AddScoped<IPackageInclusionRepository, PackageInclusionRepository>();
+            services.AddScoped<IPackageInclusionService, PackageInclusionService>();
             services.AddScoped<IServicesUnitOfWork, ServicesUnitOfWork>();
         }
 

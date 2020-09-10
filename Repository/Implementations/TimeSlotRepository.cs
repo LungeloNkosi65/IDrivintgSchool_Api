@@ -13,58 +13,33 @@ namespace Repository.Implementations
     {
         private readonly DrivingSchoolDbContext _db;
         private readonly IDapperBaseRepository _dapperBaseRepository;
+        
         public TimeSlotRepository(DrivingSchoolDbContext db, IDapperBaseRepository  dapperBaseRepository)
         {
             _db = db;
             _dapperBaseRepository = dapperBaseRepository;
         }
-        public void Add(TimeSlot timeSlot)
+        public bool Add(TimeSlot timeSlot)
         {
-            _db.TimeSlot.Add(timeSlot);
-            _db.SaveChanges();
+            string sqlcommand = "AddTimeSlot";
+            var parameters = new { timeSlot.TimeSlot1 };
+            var results = _dapperBaseRepository.Execute(sqlcommand, parameters);
+            return results == 0;
         }
-
-        public IQueryable<TimeSlot> BookingDetails(object id)
+        public bool Delete(object id)
         {
-            throw new NotImplementedException();
+            string sqlcommand = "DeleteTimeslot";
+            var parameter = new { id };
+            var results = _dapperBaseRepository.Execute(sqlcommand, parameter);
+            return results == 0;
         }
-
-        public void Delete(int? timeId)
-        {
-            var dbRecord = Find(timeId);
-            _db.TimeSlot.Remove(dbRecord);
-            _db.SaveChanges();
-        }
-
-        public void Delete(object id)
-        {
-            var dbRecord = Find(id);
-            _db.TimeSlot.Remove(dbRecord);
-            _db.SaveChanges();
-        }
-
-        public TimeSlot Find(int? timeId)
-        {
-            return _db.TimeSlot.Find(timeId);
-        }
-
-        public TimeSlot Find(object id)
-        {
-            return _db.TimeSlot.Find(id);
-        }
-
         public IQueryable<TimeSlot> GetAll()
         {
-            return _db.TimeSlot.AsQueryable();
+            string sqlcommand = "GetTimeSlot";
+            return _dapperBaseRepository.Query<TimeSlot>(sqlcommand);
         }
 
-        public IQueryable<TimeSlot> GetSingleRecord(int? timeId)
-        {
-            string command = "[GetSingleTime]";
-            var parameter = new { timeId };
-            return _dapperBaseRepository.QuerySingl<TimeSlot>(command, parameter);
-        }
-
+   
         public IQueryable<TimeSlot> GetSingleRecord(object id)
         {
             string command = "[GetSingleTime]";
@@ -72,10 +47,12 @@ namespace Repository.Implementations
             return _dapperBaseRepository.QuerySingl<TimeSlot>(command, parameter);
         }
 
-        public void Update(TimeSlot timeSlot)
+        public bool Update(TimeSlot timeSlot)
         {
-            _db.Entry(timeSlot).State = EntityState.Modified;
-            _db.SaveChanges();
+            string sqlcommand = "UpdateTimeSlot";
+            var parameters = new { timeSlot.TimeId, timeSlot.TimeSlot1 };
+            var results = _dapperBaseRepository.Execute(sqlcommand, parameters);
+            return results == 0;
         }
     }
 }
