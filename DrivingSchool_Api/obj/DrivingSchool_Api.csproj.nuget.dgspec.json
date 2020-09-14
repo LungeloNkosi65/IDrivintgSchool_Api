@@ -4,6 +4,66 @@
     "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\DrivingSchool_Api\\DrivingSchool_Api.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj",
+        "projectName": "BuisinessLogic",
+        "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj",
+        "packagesPath": "C:\\Users\\Lungelo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Lungelo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\DrivingSchool_Api\\DrivingSchool_Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,6 +91,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj"
+              },
               "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj"
               },
@@ -49,6 +112,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -259,6 +326,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj"
+              },
               "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj"
               },

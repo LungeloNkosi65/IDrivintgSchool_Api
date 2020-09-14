@@ -1,7 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using BuisinessLogic.Implementations;
+using BuisinessLogic.Interfaces;
+using DrivingSchool_Api.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Repository.Implementations;
 using Repository.Interfaces;
 using Services.Implementations;
@@ -36,25 +42,11 @@ namespace DrivingSchool_Api
                        .AllowAnyHeader();
             }));
             services.AddSwaggerGen();
+            services.Jwt();
             services.AddControllers();
             services.AddDbContext<DrivingSchoolDbContext>(options =>
-                                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddScoped<IGenericRepository<TimeSlot>, TimeSlotRepository>();
-
-            services.AddScoped<ITimeSlotService, TimeSlotService>();
-
-            services.AddScoped(typeof(IErrorMessageService<>), typeof(ErrorMessageService <>));
-
-            services.AddScoped<IDapperBaseRepository, DapperBaseRepository>();
-            services.AddScoped<IBookingPackageRepository, BookingPackageRepository>();
-            services.AddScoped<IBookingPackageService, BookingPackageService>();
-            services.AddScoped<IBookingTypeRepository, BookingTypeRepository>();
-            services.AddScoped<IBookingTypeService, BookingTypeService>();
-            services.AddScoped<IBookingRepository, BookingRepository>();
-            services.AddScoped<IBookingService, BookingService>();
-            services.AddScoped<IPackageInclusionRepository, PackageInclusionRepository>();
-            services.AddScoped<IPackageInclusionService, PackageInclusionService>();
-            services.AddScoped<IServicesUnitOfWork, ServicesUnitOfWork>();
+                                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.Dependancies();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,17 +58,15 @@ namespace DrivingSchool_Api
             }
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
-
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
-
             app.UseRouting();
             app.UseCors("CorsPolicy");
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

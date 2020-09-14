@@ -15,6 +15,8 @@ using Services.Interfaces;
 using Models;
 using Microsoft.EntityFrameworkCore;
 using DrivingSchool_Api;
+using BuisinessLogic.Implementations;
+using BuisinessLogic.Interfaces;
 
 namespace DrivingSchoolBackOffice
 {
@@ -40,11 +42,8 @@ namespace DrivingSchoolBackOffice
             services.AddControllersWithViews();
             NewMethod(services);
             services.AddScoped<IGenericRepository<TimeSlot>, TimeSlotRepository>();
-
             services.AddScoped<ITimeSlotService, TimeSlotService>();
-
             services.AddScoped(typeof(IErrorMessageService<>), typeof(ErrorMessageService<>));
-
             services.AddScoped<IDapperBaseRepository, DapperBaseRepository>();
             services.AddScoped<IBookingPackageRepository, BookingPackageRepository>();
             services.AddScoped<IBookingPackageService, BookingPackageService>();
@@ -52,6 +51,12 @@ namespace DrivingSchoolBackOffice
             services.AddScoped<IBookingTypeService, BookingTypeService>();
             services.AddScoped<IBookingRepository, BookingRepository>();
             services.AddScoped<IBookingService, BookingService>();
+            services.AddScoped<IPackageInclusionRepository, PackageInclusionRepository>();
+            services.AddScoped<IPackageInclusionService, PackageInclusionService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IAuthenticationLogic, AuthenticationLogic>();
+            services.AddScoped<IBusinessLogicUnitOfWork, BusinessLogicUnitOfWork>();
             services.AddScoped<IServicesUnitOfWork, ServicesUnitOfWork>();
         }
 

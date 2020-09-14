@@ -12,3 +12,5 @@ C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.csproj.CopyComplete
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.dll
 C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\obj\Debug\netcoreapp3.1\Services.pdb
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\bin\Debug\netcoreapp3.1\BuisinessLogic.dll
+C:\Users\Lungelo\source\repos\DrivingSchool_Api\Services\bin\Debug\netcoreapp3.1\BuisinessLogic.pdb

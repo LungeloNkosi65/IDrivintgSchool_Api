@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
@@ -10,6 +11,7 @@ namespace DrivingSchool_Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class BookingTypesController : ControllerBase
     {
         private readonly IServicesUnitOfWork _servicesUnitOfWork;
@@ -22,6 +24,7 @@ namespace DrivingSchool_Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public IActionResult GetAll()
         {
             try

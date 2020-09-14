@@ -5,6 +5,7 @@ namespace DrivingSchool_Api
 {
     public partial class PackageInclusionsAssc
     {
+        [System.ComponentModel.DataAnnotations.Key]
         public int Piid { get; set; }
         public int BkpId { get; set; }
         public int InclusionId { get; set; }

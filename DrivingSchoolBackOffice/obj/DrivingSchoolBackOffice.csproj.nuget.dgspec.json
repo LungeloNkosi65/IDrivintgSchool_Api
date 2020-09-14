@@ -33,9 +33,6 @@
             "projectReferences": {
               "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj"
-              },
-              "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Services\\Services.csproj"
               }
             }
           }
@@ -118,6 +115,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "jQuery": {
               "target": "Package",
               "version": "[3.5.1, )"
@@ -322,6 +323,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj": {
+                "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\BuisinessLogic\\BuisinessLogic.csproj"
+              },
               "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Models\\Models.csproj"
               },

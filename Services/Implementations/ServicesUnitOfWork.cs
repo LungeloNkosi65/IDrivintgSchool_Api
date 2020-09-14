@@ -14,15 +14,18 @@ namespace Services.Implementations
         public ITimeSlotService TimeSlotService { get; set; }
 
         public IPackageInclusionService PackageInclusion { get; set; }
+        public IAuthenticationService AuthenticationService { get; set; }
 
         public ServicesUnitOfWork(IBookingPackageService bookingPackageService, IBookingService bookingService,
-                                  IBookingTypeService bookingTypeService,ITimeSlotService timeSlotService,IPackageInclusionService packageInclusionService)
+                                  IBookingTypeService bookingTypeService,ITimeSlotService timeSlotService,
+                                  IPackageInclusionService packageInclusionService, IAuthenticationService authenticationService)
         {
             BookingTypeService = bookingTypeService;
             BookingPackageService = bookingPackageService;
             BookingService = bookingService;
             TimeSlotService = timeSlotService;
             PackageInclusion = packageInclusionService;
+            AuthenticationService = authenticationService;
         }
     }
 }

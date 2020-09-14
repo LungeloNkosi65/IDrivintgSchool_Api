@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Implementations;
@@ -22,7 +23,7 @@ namespace DrivingSchool_Api.Controllers
             _errorMessageService = errorMessageService;
         }
 
-        [HttpGet]
+        [HttpGet,Authorize]
         public IActionResult GetAll()
         {
             try

@@ -10,6 +10,7 @@ namespace Services.Interfaces
         IBookingService BookingService { get; set; }
         IBookingTypeService BookingTypeService { get; set; }
         ITimeSlotService TimeSlotService { get; set; }
-        public IPackageInclusionService PackageInclusion { get; set; }
+        IPackageInclusionService PackageInclusion { get; set; }
+        IAuthenticationService AuthenticationService { get; set; }
     }
 }
