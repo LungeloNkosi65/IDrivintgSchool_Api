@@ -31,7 +31,7 @@ namespace Services.Implementations
             return _bookingTypeRepository.GetAll();
         }
 
-        public IQueryable<BookingType> GetSingle(int? bkTId)
+        public BookingType GetSingle(int? bkTId)
         {
             return _bookingTypeRepository.GetSingleRecord(bkTId);
         }

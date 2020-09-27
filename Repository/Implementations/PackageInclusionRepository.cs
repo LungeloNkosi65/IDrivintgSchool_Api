@@ -48,7 +48,7 @@ namespace Repository.Implementations
             return results;
         }
 
-        public IQueryable<PackageInclusions> GetSingleRecord(object id)
+        public PackageInclusions GetSingleRecord(object id)
         {
             string sqlcommand = "GetSinglePackageInclusion";
             var parameter = new { id };

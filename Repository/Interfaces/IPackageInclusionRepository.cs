@@ -13,7 +13,7 @@ namespace Repository.Interfaces
         bool Delete(object id);
         bool Update(PackageInclusions packageInclusions);
         IQueryable<PackageInclusions> GetAll();
-        IQueryable<PackageInclusions> GetSingleRecord(object id);
+        PackageInclusions GetSingleRecord(object id);
         IQueryable<PackageInclusionVm> GetInclusionForPackage(int? bkpId);
     }
 }

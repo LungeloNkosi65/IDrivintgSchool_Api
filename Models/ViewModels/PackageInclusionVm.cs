@@ -10,6 +10,8 @@ namespace Models.ViewModels
         [Key]
         public int PiId { get; set; }
         public int InclusionId { get; set; }
+        public int BkpId { get; set; }
+        public string BkpName { get; set; }
         public string Description { get; set; }
 
     }

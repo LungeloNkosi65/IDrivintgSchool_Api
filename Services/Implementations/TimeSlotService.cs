@@ -32,7 +32,7 @@ namespace Services.Implementations
             return _timeSlotRepository.GetAll();
         }
 
-        public IQueryable<TimeSlot> GetSingleRecord(int? timeId)
+        public TimeSlot GetSingleRecord(int? timeId)
         {
             return _timeSlotRepository.GetSingleRecord(timeId);
         }

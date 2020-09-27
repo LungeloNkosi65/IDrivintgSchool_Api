@@ -1,5 +1,6 @@
 ﻿using BuisinessLogic.Implementations;
 using BuisinessLogic.Interfaces;
+using DrivingSchool_Api.GenericValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -58,8 +59,23 @@ namespace DrivingSchool_Api.Extensions
             services.AddScoped<IPackageInclusionService, PackageInclusionService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IAuthenticationLogic, AuthenticationLogic>();
+            services.AddScoped<ITokenBsLogic, TokenBsLogic>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ItokenService, TokenService>();
+            services.AddScoped<ModelValidationAttribute>();
+            services.AddScoped<ICryptoHelper, CryptoHelperBsLogic>();
             services.AddScoped<IBusinessLogicUnitOfWork, BusinessLogicUnitOfWork>();
             services.AddScoped<IServicesUnitOfWork, ServicesUnitOfWork>();
+        }
+
+        public static void ConfigureCors(this IServiceCollection services)
+        {
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
 

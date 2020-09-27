@@ -12,5 +12,6 @@ namespace Services.Interfaces
         ITimeSlotService TimeSlotService { get; set; }
         IPackageInclusionService PackageInclusion { get; set; }
         IAuthenticationService AuthenticationService { get; set; }
+        ItokenService TokenService { get; set; }
     }
 }

@@ -10,5 +10,7 @@ namespace BuisinessLogic.Interfaces
         string GenerateToke(LogInModel validUser);
 
         bool ValidateUser(LogInModel logInModel);
+
+        string GenerateGuiId();
     } 
 }

@@ -33,7 +33,7 @@ namespace Services.Implementations
             return _bookingPackageRepository.GetAll();
         }
 
-        public IQueryable<BookingPackage> GetSingle(int? bkpId)
+        public BookingPackage GetSingle(int? bkpId)
         {
             return _bookingPackageRepository.GetSingleRecord(bkpId);
         }

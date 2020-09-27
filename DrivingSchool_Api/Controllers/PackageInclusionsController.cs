@@ -56,7 +56,7 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (inclusionId.HasValue)
                 {
-                    var results = _servicesUnitOfWork.PackageInclusion.GetSingle(inclusionId).ToList();
+                    var results = _servicesUnitOfWork.PackageInclusion.GetSingle(inclusionId);
                     return Ok(results);
                 }
                 else

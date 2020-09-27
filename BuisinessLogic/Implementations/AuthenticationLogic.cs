@@ -11,6 +11,11 @@ namespace BuisinessLogic.Implementations
 {
     public class AuthenticationLogic : IAuthenticationLogic
     {
+        public string GenerateGuiId()
+        {
+            return Guid.NewGuid().ToString();
+        }
+
         public string GenerateToke(LogInModel validUser)
         {
                 var secreteKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
@@ -18,7 +23,7 @@ namespace BuisinessLogic.Implementations
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name,validUser.UserName),
-                new Claim(ClaimTypes.Role,"Admin")
+                new Claim(ClaimTypes.Role,"Customer")
             };
                 var tokeOptions = new JwtSecurityToken(
                       issuer: "http://localhost:56384",

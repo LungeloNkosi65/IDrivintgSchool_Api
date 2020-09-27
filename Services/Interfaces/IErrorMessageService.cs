@@ -15,5 +15,8 @@ namespace Services.Interfaces
 
         string NullParameter();
         string NotFound();
+        string ValidationError();
+        string DateValidation();
+        string TimeSlotTaken();
     }
 }

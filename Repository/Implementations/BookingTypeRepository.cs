@@ -41,7 +41,7 @@ namespace Repository.Implementations
             return _db.BookingType.AsQueryable();
         }
 
-        public IQueryable<BookingType> GetSingleRecord(int? bookingTypeId)
+        public BookingType GetSingleRecord(int? bookingTypeId)
         {
             string qeury = "GetSinglerBookingType";
             var parameters = new { bookingTypeId };

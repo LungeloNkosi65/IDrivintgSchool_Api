@@ -5,6 +5,7 @@ using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Repository.Implementations
@@ -19,47 +20,63 @@ namespace Repository.Implementations
             _db = db;
             _dapperBaseRepository = dapperBaseRepository;
         }
-        public void Add(Booking booking)
+        public int Add(Booking booking)
         {
-            _db.Booking.Add(booking);
-            _db.SaveChanges();
+            var parameters = new
+            {
+                booking.BkpId,
+                booking.TimeId,
+                booking.CustomerEmail,
+                booking.DateBooked,
+                booking.DateBookingFor,
+                booking.Status,
+                booking.Price
+            };
+            return _dapperBaseRepository.ExecuteWithDynamicParameter("AdddBooking", parameters);
         }
 
-        public IQueryable<BookingVm> BookingDetails(int? bookingId)
+        public IQueryable<BookingVm> BookingDetails(string userName=null)
         {
-            var parameter = new { bookingId };
-            string qeury = "BookingDetails";
+            var parameter = new { userName };
+            string qeury = "BookingView";
             return _dapperBaseRepository.QueryWithParameter<BookingVm>(qeury, parameter);
         }
 
-        public void Delete(int? bookingId)
+        public int Delete(int? bookingId)
         {
-            var dbRecord = Find(bookingId);
-            _db.Remove(dbRecord);
-            _db.SaveChanges();
+            var parameters = new { bookingId };
+            return _dapperBaseRepository.ExecuteWithDynamicParameter("DeleteBooking",bookingId);
         }
 
-        public Booking Find(int? bookindId)
-        {
-            return _db.Booking.Find(bookindId);
-        }
 
-        public IQueryable<Booking> GetSingleRecord(int? bookingId)
+        public BookingVm GetSingleRecord(int? bookingId)
         {
             var parameter = new { bookingId };
-            string qeury = "[dbo].[GetSinglerBookingType]";
-            return _dapperBaseRepository.QuerySingl<Booking>(qeury, parameter);
+            string qeury = "BookingDetails";
+            return _dapperBaseRepository.QuerySingl<BookingVm>(qeury, parameter);
         }
 
-        public IQueryable<Booking> GetAll()
+        public IQueryable<BookingVm> GetAll()
         {
-            return _db.Booking.AsQueryable();
-
+            return _dapperBaseRepository.Query<BookingVm>("BookingView");
         }
 
-        public void Update(Booking booking)
+        public int Update(Booking booking)
         {
-            _db.Entry(booking).State = EntityState.Modified;
+            var parameters = new
+            {
+                booking.BookingId,
+                booking.BkpId,
+                booking.TimeId,
+                booking.CustomerEmail,
+                booking.DateBookingFor,
+                booking.DateBooked,
+                booking.Price,
+                booking.Status
+            };
+            return _dapperBaseRepository.Execute("UpdateBooking", parameters);
         }
+
+    
     }
 }

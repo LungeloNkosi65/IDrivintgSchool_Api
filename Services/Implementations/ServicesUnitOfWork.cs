@@ -15,10 +15,12 @@ namespace Services.Implementations
 
         public IPackageInclusionService PackageInclusion { get; set; }
         public IAuthenticationService AuthenticationService { get; set; }
+        public ItokenService TokenService { get; set; }
 
         public ServicesUnitOfWork(IBookingPackageService bookingPackageService, IBookingService bookingService,
                                   IBookingTypeService bookingTypeService,ITimeSlotService timeSlotService,
-                                  IPackageInclusionService packageInclusionService, IAuthenticationService authenticationService)
+                                  IPackageInclusionService packageInclusionService, IAuthenticationService authenticationService,
+                                  ItokenService tokenService)
         {
             BookingTypeService = bookingTypeService;
             BookingPackageService = bookingPackageService;
@@ -26,6 +28,7 @@ namespace Services.Implementations
             TimeSlotService = timeSlotService;
             PackageInclusion = packageInclusionService;
             AuthenticationService = authenticationService;
+            TokenService = tokenService;
         }
     }
 }

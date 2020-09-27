@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "whXwNIva+0wizaS9/pXlBDiCsiH5leBVGcyy1eXml2XGWn6zJKd460MPVh/vWSnPU3EL1CtHS+k6qIhL0Su5tw==",
+  "dgSpecHash": "qpsMGaNI2Sd0XKQtW6cItJhE+tUnuBak4p76N3o2RNreEoMJJ28E9JrXpsMZ5Gt7YC0MSED3gyGCPR0zPZfYWA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\DrivingSchoolBackOffice\\DrivingSchoolBackOffice.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lungelo\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\knockoutjs\\3.5.1\\knockoutjs.3.5.1.nupkg.sha512",
+    "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.0.1\\microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512",
+    "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.0.1\\microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

@@ -52,5 +52,20 @@ namespace Services.Implementations
             _logger.LogInformation("Put Request: Successfull");
             return "Record Updated Successfully";
         }
+
+        public string ValidationError()
+        {
+            return "One or validation errors occured, make sure all your feild are valid input";
+        }
+
+        public string DateValidation()
+        {
+            return "One of the dates selected has already passed please make sure you select valid dates";
+        }
+
+        public string TimeSlotTaken()
+        {
+            return "The selected time slot has been taken for the day please choose another time slot or choose a different date";
+        }
     }
 }

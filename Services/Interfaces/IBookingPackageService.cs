@@ -13,7 +13,7 @@ namespace Services.Interfaces
         void Update(BookingPackage bookingPackage);
         void Delete(int? bkpId);
         IQueryable<BookingPackage> GatAll();
-        IQueryable<BookingPackage> GetSingle(int? bkpId);
+        BookingPackage GetSingle(int? bkpId);
         IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId);
     }
 }

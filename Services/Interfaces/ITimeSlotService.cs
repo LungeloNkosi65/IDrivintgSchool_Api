@@ -12,7 +12,7 @@ namespace Services.Interfaces
         bool Delete(int? timeId);
         bool Update(TimeSlot timeSlot);
         IQueryable<TimeSlot> GetAll();
-        IQueryable<TimeSlot> GetSingleRecord(int? timeId);
+        TimeSlot GetSingleRecord(int? timeId);
     
     }
 }

@@ -12,6 +12,7 @@ namespace Models.ViewModels
 
         public int BookingTypeId { get; set; }
         public string BktName { get; set; }
+        public string BkpName { get; set; }
         public string PackageDescription { get; set; }
         public string PackagePrice { get; set; }
     }

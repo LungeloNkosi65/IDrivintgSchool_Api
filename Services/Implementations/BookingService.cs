@@ -1,4 +1,5 @@
 ﻿using DrivingSchool_Api;
+using Models.ViewModels;
 using Repository.Interfaces;
 using Services.Interfaces;
 using System;
@@ -16,29 +17,34 @@ namespace Services.Implementations
         {
             _bookingRepository = bookingRepository;
         }
-        public void Add(Booking booking)
+        public int Add(Booking booking)
         {
-            _bookingRepository.Add(booking);
+           return _bookingRepository.Add(booking);
         }
 
-        public void Delete(int? bookingId)
+        public IQueryable<BookingVm> BookingDetails(string userName=null)
         {
-            _bookingRepository.Delete(bookingId);
+            return _bookingRepository.BookingDetails(userName);
         }
 
-        public IQueryable<Booking> GetAll()
+        public int Delete(int? bookingId)
+        {
+           return _bookingRepository.Delete(bookingId);
+        }
+
+        public IQueryable<BookingVm> GetAll()
         {
             return _bookingRepository.GetAll();
         }
 
-        public IQueryable<Booking> GetSingle(int? bookingId)
+        public BookingVm GetSingle(int? bookingId)
         {
             return _bookingRepository.GetSingleRecord(bookingId);
         }
 
-        public void Update(Booking booking)
+        public int Update(Booking booking)
         {
-            _bookingRepository.Update(booking);
+           return _bookingRepository.Update(booking);
         }
     }
 }

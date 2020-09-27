@@ -52,8 +52,8 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (timeId.HasValue)
                 {
-                    var result = _servicesUnitOfWork.TimeSlotService.GetSingleRecord(timeId).ToList();
-                    if (result.Any())
+                    var result = _servicesUnitOfWork.TimeSlotService.GetSingleRecord(timeId);
+                    if (result!=null)
                     {
                         return Ok(result);
                     }
@@ -103,7 +103,7 @@ namespace DrivingSchool_Api.Controllers
                 if (timeId.HasValue)
                 {
                     var dbRecord = _servicesUnitOfWork.TimeSlotService.GetSingleRecord(timeId);
-                    if (dbRecord.Any())
+                    if (dbRecord!=null)
                     {
                         _servicesUnitOfWork.TimeSlotService.Delete(timeId);
                         // Test if passing an id of int or what ever data type would work when the interface expects an object type

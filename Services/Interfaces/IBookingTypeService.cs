@@ -12,6 +12,6 @@ namespace Services.Interfaces
         void Update(BookingType bookingType);
         void Delete(int? bkTId);
         IQueryable<BookingType> GatAll();
-        IQueryable<BookingType> GetSingle(int? bkTId);
+        BookingType GetSingle(int? bkTId);
     }
 }

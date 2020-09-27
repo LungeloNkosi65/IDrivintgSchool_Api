@@ -12,7 +12,7 @@ namespace Repository.Interfaces
         void Delete(int? bookingTypeId);
         void Update(BookingType bookingType);
         IQueryable<BookingType> GetAll();
-        IQueryable<BookingType> GetSingleRecord(int? bookingTypeId);
+        BookingType GetSingleRecord(int? bookingTypeId);
         BookingType Find(int? bookingTypeId);
     }
 }

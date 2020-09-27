@@ -13,7 +13,7 @@ namespace Services.Interfaces
         bool Delete(int? inclusionId);
         bool Update(PackageInclusions packageInclusions);
         IQueryable<PackageInclusions> GetAll();
-        IQueryable<PackageInclusions> GetSingle(int? inclusionId);
+        PackageInclusions GetSingle(int? inclusionId);
         IQueryable<PackageInclusionVm> GetInclusionForPackage(int? bkpId);
     }
 }

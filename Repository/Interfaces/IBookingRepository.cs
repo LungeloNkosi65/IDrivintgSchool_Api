@@ -10,13 +10,11 @@ namespace Repository.Interfaces
 {
    public interface IBookingRepository
     {
-        void Add(Booking booking);
-        void Delete(int? bookingId);
-        void Update(Booking booking);
-        IQueryable<Booking> GetAll();
-        IQueryable<Booking> GetSingleRecord(int? bookingId);
-        Booking Find(int? bookindId);
-
-        IQueryable<BookingVm> BookingDetails(int? bookingId);
+        int Add(Booking booking);
+        int Delete(int? bookingId);
+        int Update(Booking booking);
+        IQueryable<BookingVm> GetAll();
+        BookingVm GetSingleRecord(int? bookingId);
+        IQueryable<BookingVm> BookingDetails(string userName=null);
     }
 }

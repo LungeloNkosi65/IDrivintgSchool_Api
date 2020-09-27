@@ -1,4 +1,5 @@
 ﻿using DrivingSchool_Api;
+using Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,11 @@ namespace Services.Interfaces
 {
     public interface IBookingService
     {
-        void Add(Booking booking);
-        void Update(Booking booking);
-        void Delete(int? bookingId);
-        IQueryable<Booking> GetAll();
-        IQueryable<Booking> GetSingle(int? bookingId);
+        int Add(Booking booking);
+        int Delete(int? bookingId);
+        int Update(Booking booking);
+        IQueryable<BookingVm> GetAll();
+        BookingVm GetSingle(int? bookingId);
+        IQueryable<BookingVm> BookingDetails(string userName = null);
     }
 }

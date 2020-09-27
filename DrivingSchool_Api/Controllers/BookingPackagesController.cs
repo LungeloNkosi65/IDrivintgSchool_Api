@@ -79,15 +79,10 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkpId.HasValue)
                 {
-                    var results = _bookingPackageService.BookingPackageService.GetSingle(bkpId).ToList();
-                    if (results.Any())
-                    {
+                    var results = _bookingPackageService.BookingPackageService.GetSingle(bkpId);
+                   
                         return Ok(results);
-                    }
-                    else
-                    {
-                        return NotFound(_errorMessageService.NotFound());
-                    }
+                   
                 }
                 else
                 {
@@ -130,7 +125,7 @@ namespace DrivingSchool_Api.Controllers
                 if (bkpId.HasValue)
                 {
                     var dbRecord = _bookingPackageService.BookingPackageService.GetSingle(bkpId);
-                    if (dbRecord.Any())
+                    if (dbRecord!=null)
                     {
                         _bookingPackageService.BookingPackageService.Delete(bkpId);
                         return Ok(_errorMessageService.DeleteSuccess(bkpId));

@@ -40,7 +40,7 @@ namespace Repository.Implementations
         }
 
    
-        public IQueryable<TimeSlot> GetSingleRecord(object id)
+        public TimeSlot GetSingleRecord(object id)
         {
             string command = "[GetSingleTime]";
             var parameter = new { id };

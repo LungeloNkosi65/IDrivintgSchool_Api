@@ -13,7 +13,7 @@ namespace Repository.Interfaces
         void Delete(int? bookingPackageId);
         void Update(BookingPackage bookingPackage);
         IQueryable<BookingPackage> GetAll();
-        IQueryable<BookingPackage> GetSingleRecord(int? bkPId);
+        BookingPackage GetSingleRecord(int? bkPId);
         BookingPackage Find(int? bookingPackageId);
 
         IQueryable<BookingPackageVm> GetVmDetails(int? bookingTypeId);

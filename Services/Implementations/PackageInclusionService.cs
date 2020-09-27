@@ -38,7 +38,7 @@ namespace Services.Implementations
             return _packageInclusionRepository.GetInclusionForPackage(bkpId);
         }
 
-        public IQueryable<PackageInclusions> GetSingle(int? inclusionId)
+        public PackageInclusions GetSingle(int? inclusionId)
         {
             return _packageInclusionRepository.GetSingleRecord(inclusionId);
         }

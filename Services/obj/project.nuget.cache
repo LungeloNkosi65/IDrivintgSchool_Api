@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "q4KVcw3qjtMsUo4qqsoL2Gsq/1Vxn5WchEYTpvqaBoDMYWf+OxDP6m1QIIC7+sqSg3RBrm4o4xSBv9bOuKxyiw==",
+  "dgSpecHash": "P9ecoFFYUnW4jNkDVjBl+PkZvJ4lSdzHaLRWrtPeQTrCgXPPrnwUUnYLr9Nr7RiDOqpjJ6/NLkPle5b/4fQioQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lungelo\\source\\repos\\DrivingSchool_Api\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lungelo\\.nuget\\packages\\cryptohelper\\3.0.2\\cryptohelper.3.0.2.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
+    "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.0.1\\microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512",
+    "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\2.0.1\\microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Lungelo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

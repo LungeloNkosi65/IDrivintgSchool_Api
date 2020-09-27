@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuisinessLogic", "BuisinessLogic\BuisinessLogic.csproj", "{4B4D4255-2544-44B2-91B4-62792D434B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrivingSchoolBackOffice", "DrivingSchoolBackOffice\DrivingSchoolBackOffice.csproj", "{C14B9A25-EBC0-4EB6-B931-4C28C4920C94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrivingSchoolBackOffice", "DrivingSchoolBackOffice\DrivingSchoolBackOffice.csproj", "{C14B9A25-EBC0-4EB6-B931-4C28C4920C94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication_Api", "Authentication_Api\Authentication_Api.csproj", "{5A5BD2FC-7083-4C9F-9ECA-E119192074BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C14B9A25-EBC0-4EB6-B931-4C28C4920C94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14B9A25-EBC0-4EB6-B931-4C28C4920C94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C14B9A25-EBC0-4EB6-B931-4C28C4920C94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5BD2FC-7083-4C9F-9ECA-E119192074BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5BD2FC-7083-4C9F-9ECA-E119192074BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5BD2FC-7083-4C9F-9ECA-E119192074BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5BD2FC-7083-4C9F-9ECA-E119192074BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -36,7 +36,7 @@ namespace DrivingSchoolBackOffice.Controllers
             {
                 if (bookingTypeId.HasValue)
                 {
-                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bookingTypeId).ToList();
+                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bookingTypeId);
                     return Ok(results);
                 }
                 else

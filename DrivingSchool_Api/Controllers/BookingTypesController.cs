@@ -24,7 +24,7 @@ namespace DrivingSchool_Api.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles ="Admin")]
+        [Authorize]
         public IActionResult GetAll()
         {
             try
@@ -53,8 +53,8 @@ namespace DrivingSchool_Api.Controllers
             {
                 if (bkTId.HasValue)
                 {
-                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bkTId).ToList();
-                    if (results.Any())
+                    var results = _servicesUnitOfWork.BookingTypeService.GetSingle(bkTId);
+                    if (results!=null)
                     {
                         return Ok(results);
                     }
@@ -103,7 +103,7 @@ namespace DrivingSchool_Api.Controllers
                 if (bkTId.HasValue)
                 {
                     var dbRecord = _servicesUnitOfWork.BookingTypeService.GetSingle(bkTId);
-                    if (dbRecord.Any())
+                    if (dbRecord!=null)
                     {
                         _servicesUnitOfWork.BookingTypeService.Delete(bkTId);
                         return Ok(_errorMessageService.DeleteSuccess(bkTId));
